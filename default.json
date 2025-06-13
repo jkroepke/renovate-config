@@ -59,9 +59,9 @@
     },
     {
       "groupName": "GitHub Actions",
-      "matchManagers": [
-        "github-actions"
-      ]
+      "matchManagers": ["github-actions"],
+      "semanticCommitScope": "github-actions",
+      "separateMajorMinor": false
     },
     {
       "groupName": "golang.org/x/",
