@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:js-app", "github>jkroepke/renovate-config"],
+  "schedule": ["* * * * 5"],
+  "automerge": true,
+  "platformAutomerge": true,
+  "suppressNotifications": ["prEditedNotification"],
+  "semanticCommits": "enabled",
+  "ignorePaths": ["**/dist/**"],
+  "packageRules": [
+    {
+      "groupName": "dependencies",
+      "matchManagers": ["npm", "custom.regex"],
+      "enabled": true,
+      "separateMajorMinor": true,
+      "separateMultipleMajor": true,
+      "postUpdateOptions": ["npmDedupe"]
+    },
+    {
+      "matchPackageNames": ["ts-jest"],
+      "groupName": "jest monorepo"
+    },
+    {
+      "groupName": "dev dependencies",
+      "matchDepTypes": ["devDependencies", "optionalDependencies"],
+      "matchManagers": ["npm"],
+      "semanticCommitScope": "dev"
+    }
+  ]
+}
