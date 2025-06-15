@@ -31,6 +31,7 @@
       "matchPackageNames": [
         "*"
       ],
+      "commitBody": "/^(?:{{#each (distinct (lookupArray upgrades \"packageFileDir\"))}}{{#each (split . \"/\")}}(?:{{{.}}}/{{/each}}{{#each (split . \"/\")}}){{#unless @last}}?{{/unless}}{{/each}}{{#unless @last}}|{{/unless}}{{/each}})/Chart\\.ya?ml$/",
       "bumpVersions": [
         {
           "name": "Updating Chart version",
