@@ -34,7 +34,7 @@
       "bumpVersions": [
         {
           "name": "Updating Chart version",
-          "filePatterns": ["/^{{ lookup (split packageFileDir '/') 0 }}/({{#each (distinct (map (lookupArray upgrades \"packageFileDir\") \"split\" \"/\"))}}{{{lookup . 1}}}{{#unless @last}}|{{/unless}}{{/each}})/Chart\\.(yaml|yml)$/"],
+          "filePatterns": ["/^charts/({{#each (distinct (lookupArray upgrades \"packageFileDir\"))}}{{{lookup (split . \"/\") 1}}}{{#unless @last}}|{{/unless}}{{/each}})/Chart\\.ya?ml$/"],
           "matchStrings": ["(?:^|\\n)version:\\s\"?(?<version>\\d+\\.\\d+\\.\\d+)\"?(?:$|\\n)"],
           "bumpType": "{{#if isPatch}}patch{{else}}minor{{/if}}"
         }
