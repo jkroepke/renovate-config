@@ -13,6 +13,9 @@
   ],
   "automerge": true,
   "platformAutomerge": true,
+  "postUpdateOptions": [
+    "gomodTidy"
+  ],
   "packageRules": [
     {
       "enabled": true,
@@ -46,7 +49,14 @@
         "github.com/golangci/golangci-lint/cmd/golangci-lint",
         "golangci/golangci-lint",
         "golangci/golangci-lint-action"
-      ]
+      ],
+      "addLabels": ["chore"]
+    },
+    {
+      "matchPackageNames": [
+        "gopkg.in/yaml"
+      ],
+      "enabled": false
     },
     {
       "matchManagers": [
@@ -61,7 +71,8 @@
       "groupName": "GitHub Actions",
       "matchManagers": ["github-actions"],
       "semanticCommitScope": "github-actions",
-      "separateMajorMinor": false
+      "separateMajorMinor": false,
+      "addLabels": ["chore"]
     },
     {
       "groupName": "golang.org/x/",
@@ -77,7 +88,8 @@
       ],
       "matchPackageNames": [
         "*"
-      ]
+      ],
+      "addLabels": ["chore"]
     },
     {
       "matchPackageNames": [
@@ -104,9 +116,6 @@
       "sourceUrl": "https://github.com/golang/text"
     }
   ],
-  "postUpdateOptions": [
-    "gomodTidy"
-  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -129,7 +138,8 @@
       "matchStrings": [
         "go run (?<depName>\\S+)@(?<currentValue>\\S+)"
       ],
-      "datasourceTemplate": "go"
+      "datasourceTemplate": "go",
+      "addLabels": ["chore"]
     },
     {
       "customType": "regex",
