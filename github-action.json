@@ -24,7 +24,10 @@
       "groupName": "dev dependencies",
       "matchDepTypes": ["devDependencies", "optionalDependencies"],
       "matchManagers": ["npm"],
-      "semanticCommitScope": "dev"
+      "semanticCommitScope": "dev",
+      "addLabels": [
+        "chore"
+      ]
     }
   ]
 }
