@@ -13,6 +13,7 @@
   ],
   "automerge": true,
   "platformAutomerge": true,
+  "gitIgnoredAuthors": ["210774419+jkroepke-automation[bot]@users.noreply.github.com"],
   "postUpdateOptions": [
     "gomodTidy"
   ],
