@@ -21,6 +21,11 @@
   "packageRules": [
     {
       "enabled": true,
+      "matchDatasources": ["golang-version"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "enabled": true,
       "matchFileNames": [
         "charts/**"
       ],
