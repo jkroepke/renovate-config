@@ -26,6 +26,11 @@
     },
     {
       "enabled": true,
+      "matchLanguages": ["go"],
+      "matchUpdateTypes": ["digest"]
+    },
+    {
+      "enabled": true,
       "matchFileNames": [
         "charts/**"
       ],
