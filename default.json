@@ -11,6 +11,7 @@
   "schedule": [
     "* * * * 5"
   ],
+  "ignorePaths": ["**/vendor/**"],
   "automerge": true,
   "platformAutomerge": true,
   "configMigration": true,
