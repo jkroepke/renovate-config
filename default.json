@@ -33,6 +33,11 @@
     },
     {
       "enabled": true,
+      "matchDepNames": ["go", "golang"],
+      "groupName": "go version"
+    },
+    {
+      "enabled": true,
       "matchLanguages": ["go"],
       "matchUpdateTypes": ["digest"]
     },
