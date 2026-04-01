@@ -111,9 +111,15 @@
       "addLabels": ["chore"]
     },
     {
-      "groupName": "golang.org/x/",
+      "groupName": "golang.org/x",
       "matchPackageNames": [
-        "golang.org/x/*"
+        "golang.org/x/**"
+      ]
+    },
+    {
+      "groupName": "googleapis",
+      "matchPackageNames": [
+        "google.golang.org/genproto/googleapis/**"
       ]
     },
     {
