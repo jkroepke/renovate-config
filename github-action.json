@@ -7,6 +7,13 @@
   "suppressNotifications": ["prEditedNotification"],
   "semanticCommits": "enabled",
   "ignorePaths": ["**/dist/**"],
+  "postUpdateOptions": ["npmInstallTwice"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "platformAutomerge": true,
+    "schedule": ["* * * * 5"]
+  },
   "packageRules": [
     {
       "groupName": "dependencies",
