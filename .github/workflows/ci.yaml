@@ -25,14 +25,24 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MULTI_STATUS: false
           LINTER_RULES_PATH: .
+          GITHUB_ACTIONS_ZIZMOR_CONFIG_FILE: ./.github/zizmor.yml
+          ENABLE_GITHUB_ACTIONS_STEP_SUMMARY: true
+          ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
+          SAVE_SUPER_LINTER_SUMMARY: true
+          RENOVATE_SHAREABLE_CONFIG_PRESET_FILE_NAMES: default.json,github-action.json
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_BASH: true
           VALIDATE_BASH_EXEC: true
+          VALIDATE_EDITORCONFIG: true
           VALIDATE_ENV: true
+          VALIDATE_GO_RELEASER: true
           VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: true
           VALIDATE_HTML: true
+          VALIDATE_JSON: true
           VALIDATE_NATURAL_LANGUAGE: true
-          VALIDATE_SHELL_SHFMT: true
           VALIDATE_RENOVATE: true
+          VALIDATE_SHELL_SHFMT: true
+          VALIDATE_SPELL_CODESPELL: true
           VALIDATE_XML: true
           VALIDATE_YAML: true
