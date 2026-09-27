@@ -88,6 +88,7 @@
     {
       "groupName": "GitHub Actions",
       "matchFileNames": [".github/workflows/**"],
+      "matchDatasources": ["!/github-runners$/"],
       "semanticCommitScope": "github-actions",
       "separateMajorMinor": false,
       "addLabels": ["chore"]
