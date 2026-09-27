@@ -81,6 +81,7 @@
     {
       "groupName": "GitHub Actions",
       "matchManagers": ["github-actions"],
+      "matchDatasources": ["!/github-runners$/"],
       "semanticCommitScope": "github-actions",
       "separateMajorMinor": false,
       "addLabels": ["chore"]
