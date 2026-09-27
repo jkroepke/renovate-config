@@ -87,6 +87,14 @@
       "addLabels": ["chore"]
     },
     {
+      "groupName": "GitHub Runners",
+      "matchManagers": ["github-actions"],
+      "matchDatasources": ["github-runners"],
+      "semanticCommitScope": "github-actions",
+      "separateMajorMinor": false,
+      "addLabels": ["chore"]
+    },
+    {
       "groupName": "golang.org/x",
       "matchPackageNames": ["golang.org/x/**"]
     },
