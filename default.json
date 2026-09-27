@@ -146,8 +146,9 @@
       "managerFilePatterns": ["/(^|/).+\\.yaml$/"],
       "matchStrings": [
         "[\\t ]*image:[\\t ]*\\r?\\n[\\t ]*registry:[\\t ]*[\"']?(?<registry>.*?)[\"']?[\\t ]*\\r?\\n[\\t ]*(?:repository|name):[\\t ]*[\"']?(?<repository>.*?)[\"']?[\\t ]*\\r?\\n[\\t ]*tag:[\\t ]*[\"']?(?<currentValue>[\\w\\.+-]*)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?",
-        "[\\t ]*image:[\\t ]*[\"']?(?<registry>.+\\..+?)/(?<repository>.*?):(?<currentValue>[\\w\\.+-]*)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?"
+        "[\\t ]*image:[\\t ]*[\"']?((?<registry>.+\\..+?)/)?(?<repository>.*?):(?<currentValue>[\\w\\.+-]*)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?"
       ],
+      "currentValueTemplate": "{{#if registry}}{{{registry}}}{{else)}}docker.io{{/if}}",
       "depNameTemplate": "{{{ registry }}}/{{{ repository }}}",
       "datasourceTemplate": "docker"
     }
