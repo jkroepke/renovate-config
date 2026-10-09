@@ -27,21 +27,6 @@
   "packageRules": [
     {
       "enabled": true,
-      "matchDatasources": ["golang-version"],
-      "rangeStrategy": "bump"
-    },
-    {
-      "enabled": true,
-      "matchDepNames": ["go", "golang"],
-      "groupName": "go version"
-    },
-    {
-      "enabled": true,
-      "matchCategories": ["go"],
-      "matchUpdateTypes": ["digest"]
-    },
-    {
-      "enabled": true,
       "matchFileNames": ["charts/**"],
       "commitMessagePrefix": "[{{ lookup (split packageFileDir '/') 1 }}] ",
       "groupName": "{{ lookup (split packageFileDir '/') 1 }} dependency non-major updates",
@@ -98,6 +83,21 @@
       "semanticCommitScope": "github-actions",
       "separateMajorMinor": false,
       "addLabels": ["chore"]
+    },
+    {
+      "enabled": true,
+      "matchDatasources": ["golang-version"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "enabled": true,
+      "matchDepNames": ["go", "golang"],
+      "groupName": "go version"
+    },
+    {
+      "enabled": true,
+      "matchCategories": ["go"],
+      "matchUpdateTypes": ["digest"]
     },
     {
       "groupName": "moby monorepo",
