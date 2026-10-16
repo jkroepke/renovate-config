@@ -64,6 +64,15 @@
       "labels": ["chore"]
     },
     {
+      "description": "Group '# renovate:' comments in workflows with the github-actions manager, which also detects 'with: version' (depType uses-with)",
+      "groupName": "GitHub Actions",
+      "matchManagers": ["custom.regex"],
+      "matchFileNames": [".github/workflows/**"],
+      "semanticCommitScope": "github-actions",
+      "separateMajorMinor": false,
+      "labels": ["chore"]
+    },
+    {
       "groupName": "GitHub Runners",
       "matchManagers": ["github-actions"],
       "matchDatasources": ["github-runners"],
