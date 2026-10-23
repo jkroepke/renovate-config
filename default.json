@@ -81,15 +81,6 @@
       "labels": ["chore"]
     },
     {
-      "groupName": "golangci-lint",
-      "matchPackageNames": [
-        "github.com/golangci/golangci-lint/cmd/golangci-lint",
-        "golangci/golangci-lint",
-        "golangci/golangci-lint-action"
-      ],
-      "labels": ["chore"]
-    },
-    {
       "enabled": true,
       "matchDatasources": ["golang-version"],
       "rangeStrategy": "bump"
@@ -122,6 +113,15 @@
       "groupName": "Go tools",
       "matchFileNames": ["tools/**", "Makefile"],
       "matchPackageNames": ["*"],
+      "labels": ["chore"]
+    },
+    {
+      "groupName": "golangci-lint",
+      "matchPackageNames": [
+        "/^github\\.com\\/golangci\\/golangci-lint(?:\\/v[0-9]+)?\\/cmd\\/golangci-lint$/",
+        "golangci/golangci-lint",
+        "golangci/golangci-lint-action"
+      ],
       "labels": ["chore"]
     }
   ],
