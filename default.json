@@ -123,6 +123,18 @@
         "golangci/golangci-lint-action"
       ],
       "labels": ["chore"]
+    },
+    {
+      "description": "Treat a pinned Alpine version in X.Y.Z-alpineA.B Docker tags as part of the version, so Alpine base bumps (e.g. alpine3.24 -> alpine3.25) are offered",
+      "matchDatasources": ["docker"],
+      "matchCurrentValue": "/^\\d+\\.\\d+\\.\\d+-alpine\\d+\\.\\d+(-.+)?$/",
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-alpine(?<build>\\d+)\\.(?<revision>\\d+)(?<compatibility>-.+)?$"
+    },
+    {
+      "description": "Treat a pinned Alpine version in X.Y-alpineA.B Docker tags as part of the version, so Alpine base bumps (e.g. alpine3.24 -> alpine3.25) are offered",
+      "matchDatasources": ["docker"],
+      "matchCurrentValue": "/^\\d+\\.\\d+-alpine\\d+\\.\\d+(-.+)?$/",
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)-alpine(?<build>\\d+)\\.(?<revision>\\d+)(?<compatibility>-.+)?$"
     }
   ],
   "customManagers": [
