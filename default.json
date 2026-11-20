@@ -87,11 +87,6 @@
     },
     {
       "enabled": true,
-      "matchDepNames": ["go", "golang"],
-      "groupName": "go version"
-    },
-    {
-      "enabled": true,
       "matchCategories": ["go"],
       "matchUpdateTypes": ["digest"]
     },
@@ -114,6 +109,12 @@
       "matchFileNames": ["tools/**", "Makefile"],
       "matchPackageNames": ["*"],
       "labels": ["chore"]
+    },
+    {
+      "description": "Keep after 'Go tools' so the go directive in tools/go.mod is bumped together with go.mod instead of in the 'Go tools' group",
+      "enabled": true,
+      "matchDepNames": ["go", "golang"],
+      "groupName": "go version"
     },
     {
       "groupName": "golangci-lint",
